@@ -75,7 +75,7 @@ Content-Type: application/json
 {
   "marca": "Kia",
   "clase": "SUV",
-  "modelo": 1800,
+  "modelo": 2000,
   "cilindraje": 2.0,
   "capacidad": 5
 }
@@ -107,7 +107,7 @@ Content-Type: application/json
   "date_matricula": "2024-03-15",
   "ciudad": "Bogotá",
   "pago": 1500000,
-  "car_id": 1
+  "car_id": 25
 }
 
 ###
