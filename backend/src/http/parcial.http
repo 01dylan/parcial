@@ -1,0 +1,156 @@
+## ===================================================
+### PARCIAL - HTTP CLIENT CRUD
+### Base URL: http://localhost:4000
+### ===================================================
+## http generado con IA y ajustado completo 
+
+### ================================================
+### 1. CARS
+### ================================================
+
+### GET ALL Cars
+GET http://localhost:4000/api/cars
+Content-Type: application/json
+
+###
+
+### GET ONE Car
+GET http://localhost:4000/api/cars/1
+Content-Type: application/json
+
+###
+
+### CREATE Car
+POST http://localhost:4000/api/cars
+Content-Type: application/json
+
+{
+  "marca": "Toyota",
+  "clase": "SUV",
+  "modelo": 2022,
+  "cilindraje": 2.0,
+  "capacidad": 5
+}
+
+###
+
+### UPDATE Car
+PUT http://localhost:4000/api/cars/1
+Content-Type: application/json
+
+{
+  "marca": "Mazda",
+  "clase": "SEDAN",
+  "modelo": 2023,
+  "cilindraje": 1.6,
+  "capacidad": 5
+}
+
+###
+
+### DELETE Car
+DELETE http://localhost:4000/api/cars/1
+Content-Type: application/json
+
+###
+
+### CREATE Car - prueba validacion clase invalida
+POST http://localhost:4000/api/cars
+Content-Type: application/json
+
+{
+  "marca": "Ford",
+  "clase": "MOTO",
+  "modelo": 2020,
+  "cilindraje": 1.4,
+  "capacidad": 5
+}
+
+###
+
+### CREATE Car - prueba validacion modelo invalido
+POST http://localhost:4000/api/cars
+Content-Type: application/json
+
+{
+  "marca": "Kia",
+  "clase": "SUV",
+  "modelo": 1800,
+  "cilindraje": 2.0,
+  "capacidad": 5
+}
+
+###
+
+
+### ================================================
+### 2. TUITIONS
+### ================================================
+
+### GET ALL Tuitions
+GET http://localhost:4000/api/tuitions
+Content-Type: application/json
+
+###
+
+### GET ONE Tuition
+GET http://localhost:4000/api/tuitions/1
+Content-Type: application/json
+
+###
+
+### CREATE Tuition
+POST http://localhost:4000/api/tuitions
+Content-Type: application/json
+
+{
+  "date_matricula": "2024-03-15",
+  "ciudad": "Bogotá",
+  "pago": 1500000,
+  "car_id": 1
+}
+
+###
+
+### UPDATE Tuition
+PUT http://localhost:4000/api/tuitions/1
+Content-Type: application/json
+
+{
+  "ciudad": "Medellín",
+  "pago": 2000000
+}
+
+###
+
+### DELETE Tuition
+DELETE http://localhost:4000/api/tuitions/1
+Content-Type: application/json
+
+###
+
+### CREATE Tuition - prueba validacion pago negativo
+POST http://localhost:4000/api/tuitions
+Content-Type: application/json
+
+{
+  "date_matricula": "2024-03-15",
+  "ciudad": "Cali",
+  "pago": -500,
+  "car_id": 1
+}
+
+###
+
+### CREATE Tuition - prueba validacion ciudad vacia
+POST http://localhost:4000/api/tuitions
+Content-Type: application/json
+
+{
+  "date_matricula": "2024-03-15",
+  "ciudad": "",
+  "pago": 1000000,
+  "car_id": 1
+}
+
+###
